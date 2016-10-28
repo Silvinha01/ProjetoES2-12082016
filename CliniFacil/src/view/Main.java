@@ -106,7 +106,7 @@ public class Main extends javax.swing.JFrame {
         jLabel5.setText("Sexo");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setText("Altura (m)");
+        jLabel7.setText("Altura (metros)");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Peso (kg)");
