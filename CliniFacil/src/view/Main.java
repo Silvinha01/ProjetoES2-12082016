@@ -308,7 +308,7 @@ public class Main extends javax.swing.JFrame {
         });
 
         jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel24.setText("E-mail");
+        jLabel24.setText("Correio Eletrônico");
 
         jButton2.setBackground(new java.awt.Color(255, 51, 51));
         jButton2.setText("Excluir");
