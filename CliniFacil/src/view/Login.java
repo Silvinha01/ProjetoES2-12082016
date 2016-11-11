@@ -65,7 +65,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Usuario:");
+        jLabel1.setText("Usuário:");
 
         txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         txtUsuario.setText("admin");
@@ -143,7 +143,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Bem Vindo ao seu sistema de Clínica Médica!");
+        jLabel5.setText("Bem vindo ao seu sistema de Clínica Médica!");
         desktopPane.add(jLabel5);
         jLabel5.setBounds(0, 20, 800, 60);
 
