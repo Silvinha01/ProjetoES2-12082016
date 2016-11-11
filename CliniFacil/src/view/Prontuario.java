@@ -234,10 +234,11 @@ public class Prontuario extends javax.swing.JFrame {
         desktopPane.add(jPanel1);
         jPanel1.setBounds(10, 30, 780, 210);
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Nº Prontuário: ");
         desktopPane.add(jLabel9);
-        jLabel9.setBounds(530, 10, 93, 17);
+        jLabel9.setBounds(510, 10, 110, 17);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -509,7 +510,8 @@ public class Prontuario extends javax.swing.JFrame {
         desktopPane.add(jPanel2);
         jPanel2.setBounds(10, 260, 780, 280);
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("1057");
         desktopPane.add(jLabel3);
         jLabel3.setBounds(620, 10, 60, 20);
