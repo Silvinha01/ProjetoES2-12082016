@@ -81,6 +81,7 @@ public class Prontuario extends javax.swing.JFrame {
         helpMenu1 = new javax.swing.JMenu();
         contentMenuItem1 = new javax.swing.JMenuItem();
         aboutMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         cutMenuItem = new javax.swing.JMenuItem();
         copyMenuItem = new javax.swing.JMenuItem();
@@ -550,7 +551,7 @@ public class Prontuario extends javax.swing.JFrame {
         menuBar.add(fileMenu);
 
         helpMenu1.setMnemonic('h');
-        helpMenu1.setText("Prontuários");
+        helpMenu1.setText("Pacientes");
 
         contentMenuItem1.setMnemonic('c');
         contentMenuItem1.setText("Visualizar");
@@ -569,6 +570,14 @@ public class Prontuario extends javax.swing.JFrame {
             }
         });
         helpMenu1.add(aboutMenuItem1);
+
+        jMenuItem1.setText("Prontuários");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        helpMenu1.add(jMenuItem1);
 
         menuBar.add(helpMenu1);
 
@@ -602,7 +611,7 @@ public class Prontuario extends javax.swing.JFrame {
         helpMenu.setText("Ajuda");
 
         contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Conteúdos");
+        contentMenuItem.setText("Conteúdo de Ajuda");
         helpMenu.add(contentMenuItem);
 
         aboutMenuItem.setMnemonic('a');
@@ -734,6 +743,10 @@ public class Prontuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/logo.png")));
     }
@@ -802,6 +815,7 @@ public class Prontuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
