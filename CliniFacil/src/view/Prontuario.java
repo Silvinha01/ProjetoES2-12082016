@@ -155,7 +155,7 @@ public class Prontuario extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setText("Cor");
+        jLabel10.setText("Raça / Cor");
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField5.setText("Branco");
