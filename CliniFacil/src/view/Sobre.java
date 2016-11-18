@@ -44,7 +44,7 @@ public class Sobre extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setText("CliniFácil - Gerenciamento de Clínicas Médicas - 1.0");
+        jLabel7.setText("CliniFácil - Gerenciamento de Clínicas Médicas");
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

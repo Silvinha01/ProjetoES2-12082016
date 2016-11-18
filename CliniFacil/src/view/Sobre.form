@@ -127,7 +127,7 @@
               <Font name="Tahoma" size="12" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="CliniF&#xe1;cil - Gerenciamento de Cl&#xed;nicas M&#xe9;dicas - 1.0"/>
+            <Property name="text" type="java.lang.String" value="CliniF&#xe1;cil - Gerenciamento de Cl&#xed;nicas M&#xe9;dicas"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
