@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import java.awt.Toolkit;
 
-/**
- *
- * @author 651200105
- */
 public class Prontuario extends javax.swing.JFrame {
 
     /**
@@ -657,7 +648,8 @@ public class Prontuario extends javax.swing.JFrame {
     }//GEN-LAST:event_exitMenuItemActionPerformed
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
-        About about = new About();
+        Sobre sobre = new Sobre();
+        sobre.setVisible(true);
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
     private void aboutMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItem1ActionPerformed
