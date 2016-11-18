@@ -5,23 +5,19 @@
  */
 package view;
 
-import java.awt.Button;
 import java.awt.Toolkit;
-import javax.swing.JPanel;
+import javax.swing.JDesktopPane;
 
 /**
  *
  * @author 651200105
  */
-public class Principal extends javax.swing.JFrame {
-
+public class Main extends javax.swing.JFrame {
+    Principal principal = new Principal();
 
     
-    public Principal() {
-        initComponents();
-        btnConsultas.setVisible(false);
-        btnContabil.setVisible(false);
-        btnConfig.setVisible(false);
+    public Main() {
+        initComponents();        
         setIcon();
     }
     
@@ -36,11 +32,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        paneHome = new javax.swing.JDesktopPane();
-        btnPacientes = new javax.swing.JButton();
-        btnConsultas = new javax.swing.JButton();
-        btnContabil = new javax.swing.JButton();
-        btnConfig = new javax.swing.JButton();
+        mainPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -61,51 +53,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        paneHome.setBackground(new java.awt.Color(234, 234, 234));
-
-        btnPacientes.setBackground(new java.awt.Color(66, 165, 245));
-        btnPacientes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnPacientes.setText("Pacientes");
-        btnPacientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPacientesActionPerformed(evt);
-            }
-        });
-        paneHome.add(btnPacientes);
-        btnPacientes.setBounds(110, 40, 596, 75);
-
-        btnConsultas.setBackground(new java.awt.Color(66, 165, 245));
-        btnConsultas.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnConsultas.setText("Consultas");
-        btnConsultas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultasActionPerformed(evt);
-            }
-        });
-        paneHome.add(btnConsultas);
-        btnConsultas.setBounds(110, 150, 596, 75);
-
-        btnContabil.setBackground(new java.awt.Color(66, 165, 245));
-        btnContabil.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnContabil.setText("Contábil");
-        btnContabil.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnContabilActionPerformed(evt);
-            }
-        });
-        paneHome.add(btnContabil);
-        btnContabil.setBounds(110, 270, 596, 75);
-
-        btnConfig.setBackground(new java.awt.Color(66, 165, 245));
-        btnConfig.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnConfig.setText("Configurações");
-        btnConfig.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConfigActionPerformed(evt);
-            }
-        });
-        paneHome.add(btnConfig);
-        btnConfig.setBounds(110, 400, 596, 75);
+        mainPane.setBackground(new java.awt.Color(234, 234, 234));
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Arquivo");
@@ -217,12 +165,12 @@ public class Principal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(paneHome, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainPane, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(paneHome, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
+            .addComponent(mainPane, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
         );
 
         pack();
@@ -261,29 +209,13 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
-    private void btnPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacientesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPacientesActionPerformed
-
-    private void btnConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnConsultasActionPerformed
-
-    private void btnContabilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContabilActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnContabilActionPerformed
-
-    private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnConfigActionPerformed
-
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/logo.png")));
     }
     
 
     // public static void mainProntuario(String args[]) {
-    public void iniciaProntuario() {
+    public void iniciaMain() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -292,18 +224,18 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new Main().setVisible(true);
             }
         });
     }
@@ -311,10 +243,6 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem aboutMenuItem1;
-    private javax.swing.JButton btnConfig;
-    private javax.swing.JButton btnConsultas;
-    private javax.swing.JButton btnContabil;
-    private javax.swing.JButton btnPacientes;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem contentMenuItem1;
     private javax.swing.JMenuItem copyMenuItem;
@@ -325,9 +253,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenu helpMenu1;
+    private javax.swing.JDesktopPane mainPane;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
-    private javax.swing.JDesktopPane paneHome;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
