@@ -14,6 +14,7 @@ import javax.swing.*;
 public class Login extends javax.swing.JFrame {
     Prontuario prontuario = new Prontuario();
     Main main = new Main();
+    Principal principal = new Principal();
     
     public Login() {
         initComponents();
@@ -328,7 +329,8 @@ public class Login extends javax.swing.JFrame {
         
         if (usuario.equals("admin") && senha.equals("admin")) {
             System.out.println("Login efetuado com sucesso!");
-            prontuario.iniciaProntuario();
+            principal.iniciaPrincipal();
+            // prontuario.iniciaProntuario();
             // main.iniciaMain();
             
             this.dispose();        

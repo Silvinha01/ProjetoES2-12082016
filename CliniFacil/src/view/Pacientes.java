@@ -3,7 +3,8 @@ package view;
 import java.awt.Toolkit;
 
 public class Pacientes extends javax.swing.JFrame {
-
+    Prontuario prontuario = new Prontuario();
+    
     /**
      * Creates new form Main
      */
@@ -25,9 +26,11 @@ public class Pacientes extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        Editar = new javax.swing.JButton();
+        btnRemover = new javax.swing.JButton();
+        btnDetalhar = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btnAdicionar = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -96,32 +99,47 @@ public class Pacientes extends javax.swing.JFrame {
         desktopPane.add(jPanel1);
         jPanel1.setBounds(10, 60, 780, 470);
 
-        jButton1.setText("Remover");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnRemover.setText("Remover");
+        btnRemover.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnRemoverActionPerformed(evt);
             }
         });
-        desktopPane.add(jButton1);
-        jButton1.setBounds(680, 20, 90, 30);
+        desktopPane.add(btnRemover);
+        btnRemover.setBounds(680, 20, 90, 30);
 
-        jButton2.setText("Adicionar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnDetalhar.setText("Detalhar");
+        btnDetalhar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnDetalharActionPerformed(evt);
             }
         });
-        desktopPane.add(jButton2);
-        jButton2.setBounds(480, 20, 90, 30);
+        desktopPane.add(btnDetalhar);
+        btnDetalhar.setBounds(480, 20, 90, 30);
 
-        Editar.setText("Editar");
-        Editar.addActionListener(new java.awt.event.ActionListener() {
+        btnEditar.setText("Editar");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditarActionPerformed(evt);
+                btnEditarActionPerformed(evt);
             }
         });
-        desktopPane.add(Editar);
-        Editar.setBounds(580, 20, 90, 30);
+        desktopPane.add(btnEditar);
+        btnEditar.setBounds(580, 20, 90, 30);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel1.setText("Lista de Pacientes");
+        desktopPane.add(jLabel1);
+        jLabel1.setBounds(40, 0, 320, 70);
+
+        btnAdicionar.setBackground(new java.awt.Color(51, 153, 255));
+        btnAdicionar.setText("Adicionar");
+        btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarActionPerformed(evt);
+            }
+        });
+        desktopPane.add(btnAdicionar);
+        btnAdicionar.setBounds(380, 20, 90, 30);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Arquivo");
@@ -289,17 +307,21 @@ public class Pacientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnRemoverActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnDetalharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetalharActionPerformed
+        prontuario.iniciaProntuario();
+    }//GEN-LAST:event_btnDetalharActionPerformed
 
-    private void EditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditarActionPerformed
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        prontuario.iniciaProntuario();
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EditarActionPerformed
+    }//GEN-LAST:event_btnAdicionarActionPerformed
 
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/logo.png")));
@@ -307,7 +329,7 @@ public class Pacientes extends javax.swing.JFrame {
     
 
     // public static void mainProntuario(String args[]) {
-    public void iniciaProntuario() {
+    public void iniciaPacientes() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -333,9 +355,12 @@ public class Pacientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Editar;
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem aboutMenuItem1;
+    private javax.swing.JButton btnAdicionar;
+    private javax.swing.JButton btnDetalhar;
+    private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnRemover;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem contentMenuItem1;
     private javax.swing.JMenuItem copyMenuItem;
@@ -347,8 +372,7 @@ public class Pacientes extends javax.swing.JFrame {
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenu helpMenu1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
