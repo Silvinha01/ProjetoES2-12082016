@@ -6,7 +6,10 @@
 package view;
 
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JDesktopPane;
+import javax.swing.JPanel;
 
 /**
  *

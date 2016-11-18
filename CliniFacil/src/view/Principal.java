@@ -6,7 +6,11 @@
 package view;
 
 import java.awt.Button;
+import java.awt.Component;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JDesktopPane;
 import javax.swing.JPanel;
 
 /**
@@ -14,7 +18,7 @@ import javax.swing.JPanel;
  * @author 651200105
  */
 public class Principal extends javax.swing.JFrame {
-
+    Pacientes pacientes = new Pacientes();
 
     
     public Principal() {
@@ -24,8 +28,6 @@ public class Principal extends javax.swing.JFrame {
         btnConfig.setVisible(false);
         setIcon();
     }
-    
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -262,7 +264,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
     private void btnPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacientesActionPerformed
-        // TODO add your handling code here:
+        pacientes.iniciaPacientes();
     }//GEN-LAST:event_btnPacientesActionPerformed
 
     private void btnConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultasActionPerformed
@@ -283,7 +285,7 @@ public class Principal extends javax.swing.JFrame {
     
 
     // public static void mainProntuario(String args[]) {
-    public void iniciaProntuario() {
+    public void iniciaPrincipal() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
