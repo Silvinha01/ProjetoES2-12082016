@@ -1,9 +1,9 @@
 CliniFacil/nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+CliniFacil/build/
+CliniFacil/nbbuild/
+CliniFacil/dist/
+CliniFacil/nbdist/
+CliniFacil/.nb-gradle/
 
 
 *.class

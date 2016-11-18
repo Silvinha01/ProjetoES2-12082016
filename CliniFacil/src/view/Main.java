@@ -1,17 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package view;
 
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JDesktopPane;
+import javax.swing.JPanel;
 
-public class Pacientes extends javax.swing.JFrame {
-    Prontuario prontuario = new Prontuario();
+/**
+ *
+ * @author 651200105
+ */
+public class Main extends javax.swing.JFrame {
+    Principal principal = new Principal();
+
     
-    /**
-     * Creates new form Main
-     */
-    public Pacientes() {
-        initComponents();
+    public Main() {
+        initComponents();        
         setIcon();
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -22,15 +35,7 @@ public class Pacientes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        desktopPane = new javax.swing.JDesktopPane();
-        jPanel1 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnRemover = new javax.swing.JButton();
-        btnDetalhar = new javax.swing.JButton();
-        btnEditar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnAdicionar = new javax.swing.JButton();
+        mainPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         openMenuItem = new javax.swing.JMenuItem();
@@ -40,7 +45,6 @@ public class Pacientes extends javax.swing.JFrame {
         helpMenu1 = new javax.swing.JMenu();
         contentMenuItem1 = new javax.swing.JMenuItem();
         aboutMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         cutMenuItem = new javax.swing.JMenuItem();
         copyMenuItem = new javax.swing.JMenuItem();
@@ -52,94 +56,7 @@ public class Pacientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        desktopPane.setBackground(new java.awt.Color(234, 234, 234));
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"John Christopher Depp II", "09/jun/1963", "(51) 3030-1234", "10/ago/2016"},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Nome", "Nascimento", "Telefone", "Última Consulta"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
-        }
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 766, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
-        );
-
-        desktopPane.add(jPanel1);
-        jPanel1.setBounds(10, 60, 780, 470);
-
-        btnRemover.setText("Remover");
-        btnRemover.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemoverActionPerformed(evt);
-            }
-        });
-        desktopPane.add(btnRemover);
-        btnRemover.setBounds(680, 20, 90, 30);
-
-        btnDetalhar.setText("Detalhar");
-        btnDetalhar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDetalharActionPerformed(evt);
-            }
-        });
-        desktopPane.add(btnDetalhar);
-        btnDetalhar.setBounds(480, 20, 90, 30);
-
-        btnEditar.setText("Editar");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
-            }
-        });
-        desktopPane.add(btnEditar);
-        btnEditar.setBounds(580, 20, 90, 30);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel1.setText("Lista de Pacientes");
-        desktopPane.add(jLabel1);
-        jLabel1.setBounds(40, 0, 320, 70);
-
-        btnAdicionar.setBackground(new java.awt.Color(51, 153, 255));
-        btnAdicionar.setText("Adicionar");
-        btnAdicionar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdicionarActionPerformed(evt);
-            }
-        });
-        desktopPane.add(btnAdicionar);
-        btnAdicionar.setBounds(380, 20, 90, 30);
+        mainPane.setBackground(new java.awt.Color(234, 234, 234));
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Arquivo");
@@ -178,7 +95,7 @@ public class Pacientes extends javax.swing.JFrame {
         menuBar.add(fileMenu);
 
         helpMenu1.setMnemonic('h');
-        helpMenu1.setText("Pacientes");
+        helpMenu1.setText("Prontuários");
 
         contentMenuItem1.setMnemonic('c');
         contentMenuItem1.setText("Visualizar");
@@ -197,14 +114,6 @@ public class Pacientes extends javax.swing.JFrame {
             }
         });
         helpMenu1.add(aboutMenuItem1);
-
-        jMenuItem1.setText("Prontuários");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        helpMenu1.add(jMenuItem1);
 
         menuBar.add(helpMenu1);
 
@@ -238,7 +147,7 @@ public class Pacientes extends javax.swing.JFrame {
         helpMenu.setText("Ajuda");
 
         contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Conteúdo de Ajuda");
+        contentMenuItem.setText("Conteúdos");
         helpMenu.add(contentMenuItem);
 
         aboutMenuItem.setMnemonic('a');
@@ -259,12 +168,12 @@ public class Pacientes extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainPane, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
+            .addComponent(mainPane, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
         );
 
         pack();
@@ -276,7 +185,7 @@ public class Pacientes extends javax.swing.JFrame {
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
         Sobre sobre = new Sobre();
-        sobre.setVisible(true);
+        sobre.iniciaSobre();
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
     private void aboutMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItem1ActionPerformed
@@ -303,33 +212,13 @@ public class Pacientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_saveAsMenuItemActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void btnRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemoverActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRemoverActionPerformed
-
-    private void btnDetalharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetalharActionPerformed
-        prontuario.iniciaProntuario();
-    }//GEN-LAST:event_btnDetalharActionPerformed
-
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        prontuario.iniciaProntuario();
-    }//GEN-LAST:event_btnEditarActionPerformed
-
-    private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnAdicionarActionPerformed
-
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/logo.png")));
     }
     
 
     // public static void mainProntuario(String args[]) {
-    public void iniciaPacientes() {
+    public void iniciaMain() {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -338,18 +227,18 @@ public class Pacientes extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Pacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Pacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Pacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Pacientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Pacientes().setVisible(true);
+                new Main().setVisible(true);
             }
         });
     }
@@ -357,26 +246,17 @@ public class Pacientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem aboutMenuItem1;
-    private javax.swing.JButton btnAdicionar;
-    private javax.swing.JButton btnDetalhar;
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnRemover;
     private javax.swing.JMenuItem contentMenuItem;
     private javax.swing.JMenuItem contentMenuItem1;
     private javax.swing.JMenuItem copyMenuItem;
     private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JMenuItem deleteMenuItem;
-    private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenu helpMenu1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JDesktopPane mainPane;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
