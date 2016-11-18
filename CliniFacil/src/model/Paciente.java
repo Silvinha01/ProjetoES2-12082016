@@ -5,8 +5,8 @@ import java.util.Date;
 public class Paciente {
     private int id;
     private String nome;
-    private Date dataNscimento;
-    private Sexo sexo;
+    private String dataNascimento;
+    private String sexo;
     private double peso;
     private double altura;
     private String racaCor;
@@ -22,6 +22,28 @@ public class Paciente {
     private String celular;
     private String correioEletronico;
 
+    public Paciente(String nome, String dataNascimento, String sexo, double peso, double altura, String racaCor, String cep, String endereco, int numero, String complemento, String bairro, String cidade, String estado, String pais, String telefone, String celular, String correioEletronico) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.altura = altura;
+        this.racaCor = racaCor;
+        this.cep = cep;
+        this.endereco = endereco;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.pais = pais;
+        this.telefone = telefone;
+        this.celular = celular;
+        this.correioEletronico = correioEletronico;
+    }
+
+    
+    
     public int getId() {
         return id;
     }
@@ -38,19 +60,19 @@ public class Paciente {
         this.nome = nome;
     }
 
-    public Date getDataNscimento() {
-        return dataNscimento;
+    public String getDataNscimento() {
+        return dataNascimento;
     }
 
-    public void setDataNscimento(Date dataNscimento) {
-        this.dataNscimento = dataNscimento;
+    public void setDataNscimento(String dataNscimento) {
+        this.dataNascimento = dataNscimento;
     }
 
-    public Sexo getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(Sexo sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 

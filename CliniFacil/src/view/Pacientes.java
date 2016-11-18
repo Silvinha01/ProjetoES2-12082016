@@ -5,14 +5,16 @@ import java.awt.Toolkit;
 public class Pacientes extends javax.swing.JFrame {
     Prontuario prontuario = new Prontuario();
     
-    /**
-     * Creates new form Main
-     */
+
     public Pacientes() {
         initComponents();
-        setIcon();
+        setIcon();        
     }
 
+    public int getSelectedRow(){
+        return tablePacientes.getSelectedRow();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -25,7 +27,7 @@ public class Pacientes extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablePacientes = new javax.swing.JTable();
         btnRemover = new javax.swing.JButton();
         btnDetalhar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -50,13 +52,11 @@ public class Pacientes extends javax.swing.JFrame {
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         desktopPane.setBackground(new java.awt.Color(234, 234, 234));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablePacientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"John Christopher Depp II", "09/jun/1963", "(51) 3030-1234", "10/ago/2016"},
                 {null, null, null, null},
@@ -75,9 +75,9 @@ public class Pacientes extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(1).setResizable(false);
+        jScrollPane1.setViewportView(tablePacientes);
+        if (tablePacientes.getColumnModel().getColumnCount() > 0) {
+            tablePacientes.getColumnModel().getColumn(1).setResizable(false);
         }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -312,15 +312,21 @@ public class Pacientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRemoverActionPerformed
 
     private void btnDetalharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetalharActionPerformed
-        prontuario.iniciaProntuario();
+        if (getSelectedRow() == 0) {
+            prontuario.iniciaProntuario();  
+        }
+
     }//GEN-LAST:event_btnDetalharActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        prontuario.iniciaProntuario();
+        if (getSelectedRow() == 0) {
+            prontuario.iniciaProntuario();  
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarActionPerformed
-        // TODO add your handling code here:
+        prontuario.iniciaProntuario();
+        
     }//GEN-LAST:event_btnAdicionarActionPerformed
 
     private void setIcon() {
@@ -376,12 +382,12 @@ public class Pacientes extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem openMenuItem;
     private javax.swing.JMenuItem pasteMenuItem;
     private javax.swing.JMenuItem saveAsMenuItem;
     private javax.swing.JMenuItem saveMenuItem;
+    private javax.swing.JTable tablePacientes;
     // End of variables declaration//GEN-END:variables
 
 
