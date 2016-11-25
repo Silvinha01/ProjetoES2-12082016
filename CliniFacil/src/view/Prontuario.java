@@ -84,7 +84,7 @@ public class Prontuario extends javax.swing.JFrame {
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         desktopPane.setBackground(new java.awt.Color(234, 234, 234));
 
